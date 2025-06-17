@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+}
+
+.child {
+  display: flex;
+  width: 100vw;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo-description {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 300px;
+  position: sticky;
+  justify-content: center;
+  left: 0;
+  top: 100px;
+}
+
+.logo-scrollable-container {
+  flex: 1;
+  height: 100vh;
+}

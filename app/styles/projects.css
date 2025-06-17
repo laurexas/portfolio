@@ -1,0 +1,11 @@
+.screen-mask {
+  mask-image: linear-gradient(black, black), url("/projects/mask.svg");
+  mask-composite: exclude;
+  mask-repeat: no-repeat;
+  mask-size: auto;
+  mask-position: center 50px;
+}
+
+.custom-background {
+  background: linear-gradient(to bottom, theme("colors.slate.500") 100px);
+}
