@@ -8,6 +8,13 @@ import "@/app/styles/about.css";
 import SectionTitle from "./SectionTitle";
 import { useRelativeMousePosition } from "../hooks/useMousePosition";
 
+import dynamic from "next/dynamic";
+
+const ModelViewer = dynamic(() => import("@/app/components/ModelViewer"), {
+  ssr: false,
+  loading: () => <p>Loading 3D model...</p>,
+});
+
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
@@ -41,7 +48,7 @@ const About = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="h-screen flex flex-col items-center justify-center p-8 relative"
+      className="h-screen flex flex-col items-center justify-center  relative"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-pixel-dark to-[#1A1F2C] z-0"></div>
       <div className="container mx-auto relative z-10 py-20">
@@ -60,7 +67,7 @@ const About = () => {
               className="relative pixel-corners bg-neon-purple/10 backdrop-blur-sm border border-neon-purple/30 h-full"
             >
               <div className="relative flex flex-col w-full h-full">
-                <h3 className="text-neon-purple pixel-text text-lg px-8 h-[80px] flex items-center">
+                <h3 className="text-neon-purple pixel-text text-lg px-8 h-[40px] md:h-[80px] flex items-end">
                   WHO AM I
                 </h3>
                 <motion.div
@@ -72,27 +79,35 @@ const About = () => {
                   }}
                 >
                   <p
-                    className="absolute p-8 left-0 pixel-text text-sm mb-4 mt-[65px]"
+                    className="absolute text-neon-orange p-8 left-0 pixel-text text-[12px] md:text-sm mb-4 mt-[65px]"
                     onMouseEnter={() => setIsHovering(true)}
                     onMouseLeave={() => setIsHovering(false)}
                   >
-                    Hello! I'm a passionate{" "}
-                    <span className="text-neon-orange">frontend developer</span>{" "}
-                    with a love for creating engaging and interactive user
-                    experiences. With a focus on modern web technologies, I
-                    build responsive, accessible, and performant web
-                    applications.
+                    I'm driven by a deep curiosity for how people interact with
+                    products—combining design, marketing, and development to
+                    turn ideas into reality. I love understanding the human
+                    logic behind great user experiences and constantly push to
+                    bring meaningful digital concepts to life. Outside of work,
+                    I split my time between Thailand and Japan—either training
+                    at a Muay Thai gym or enjoying ramen in Tokyo, always
+                    drawing inspiration from culture, discipline, and everyday
+                    experiences.
                   </p>
                 </motion.div>
 
                 <motion.div className="content">
-                  <p className="pixel-text text-sm p-8">
-                    My journey in web development started X years ago, and since
-                    then, I've been constantly learning and evolving my skills
-                    to stay at the forefront of the industry. When I'm not
-                    coding, you can find me exploring new technologies,
-                    contributing to open-source projects, or enjoying outdoor
-                    activities.
+                  <p className="pixel-text text-xs md:text-sm p-8">
+                    I'm a{" "}
+                    <span className=" text-neon-blue ">software engineer</span>{" "}
+                    with a background in blockchain startups and full-stack
+                    product development. From building clean, tested frontend
+                    code at Synterneet, to redesigning and rebuilding a KYC
+                    platform from scratch, I’ve focused on delivering scalable,
+                    user-centered solutions. At SolarShare.io, I lead
+                    development to power a solar NFT marketplace. I work closely
+                    1-on-1 with designers to bring concepts to life, and I’m
+                    passionate about crafting immersive web experiences using
+                    Framer Motion and Three.js.
                   </p>
                 </motion.div>
               </div>
@@ -105,20 +120,14 @@ const About = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <div className="pixel-corners bg-neon-blue/10 backdrop-blur-sm border border-neon-blue/30 p-8 flex items-center justify-center h-full">
+            <div className="hidden lg:flex pixel-corners bg-neon-blue/10 backdrop-blur-sm border border-neon-blue/30 p-8  items-center justify-center h-full">
               <div className="w-full h-64 lg:h-80 flex flex-col items-center justify-center">
-                <div className="pixel-corners w-32 h-32 bg-neon-orange/20 relative animate-pixel-float mb-4">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="pixel-text text-neon-orange text-xs">
-                      3D MODEL
-                    </span>
-                  </div>
-                </div>
+                <ModelViewer />
+
                 <p className="text-center text-gray-400 pixel-text text-xs">
-                  3D model placeholder
-                </p>
-                <p className="text-center text-gray-500 text-xs mt-2">
-                  Will be replaced with custom 3D model
+                  Ramen is more than food for me – it’s a reminder of my time in
+                  Japan, where I found beauty in detail, calm in craft, and joy
+                  in every bowl.
                 </p>
               </div>
             </div>

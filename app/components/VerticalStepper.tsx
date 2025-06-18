@@ -55,7 +55,7 @@ const VerticalStepper = () => {
   );
 
   return (
-    <div className="fixed left-8 top-0 h-full z-40 flex items-center pointer-events-none">
+    <div className="fixed left-8 top-0 h-full z-40 hidden  md:flex items-center pointer-events-none">
       <div className="h-[80%] flex flex-col justify-between relative pointer-events-auto">
         <div className="absolute left-[11px] top-4 bottom-4 w-2 border-l-4 border-dashed border-neon-purple/60 -z-10"></div>
 

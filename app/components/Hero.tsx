@@ -37,14 +37,14 @@ const Hero: React.FC = () => {
       >
         <div className="mb-8">
           <h2 className="pixel-text text-neon-blue mb-2 text-2xl">
-            HELLO WORLD
+            Laurynas Kairys
           </h2>
           <h1 className="pixel-text text-4xl md:text-5xl lg:text-7xl text-white mb-4">
-            FRONTEND <span className="text-neon-orange">DEVELOPER</span>
+            Software <span className="text-neon-orange">Engineer</span>
           </h1>
-          <p className="text-gray-300 max-w-md mx-auto mb-8">
-            I craft pixel-perfect interfaces and bring digital experiences to
-            life
+          <p className="text-gray-300 max-w-md text-lg mx-auto mb-8 font-[600]">
+            Turning <span className="text-neon-orange">BOLD</span> ideas into
+            digital ventures through code, strategy, and creativity.
           </p>
         </div>
 

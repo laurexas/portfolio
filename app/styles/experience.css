@@ -11,8 +11,6 @@
 }
 
 .logo-container {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   position: relative;
 }
@@ -23,7 +21,7 @@
   flex-direction: column;
   width: 50vw;
   height: 300px;
-  position: sticky;
+
   justify-content: center;
   left: 0;
   top: 100px;

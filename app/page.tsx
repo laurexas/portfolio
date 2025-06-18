@@ -4,8 +4,13 @@ import Hero from "../../portfolio-2/app/components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
-import Tools from "./components/Tools";
+
 import Footer from "./components/Footer";
+import dynamic from "next/dynamic";
+
+const Tools = dynamic(() => import("@/app/components/Tools"), {
+  ssr: false,
+});
 
 const Home = () => {
   return (

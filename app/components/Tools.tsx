@@ -10,6 +10,8 @@ const technologies = [
   "Next.js",
   "Node.js",
   "MongoDB",
+  "Figma",
+  "React Native",
   "Redux",
   "Express",
   "Vite",
@@ -52,7 +54,7 @@ const Tools = () => {
     <section
       id="tools"
       ref={sectionRef}
-      className="min-h-screen py-24 px-8 relative"
+      className="min-h-screen py-24 lg:px-8 relative"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-pixel-dark to-[#12151E] z-0"></div>
 
