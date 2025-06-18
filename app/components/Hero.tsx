@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { Github } from "lucide-react";
+import Image from "next/image";
 
 const Hero: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
@@ -36,9 +38,34 @@ const Hero: React.FC = () => {
         } transition-all duration-1000 ease-out`}
       >
         <div className="mb-8">
-          <h2 className="pixel-text text-neon-blue mb-2 text-2xl">
-            Laurynas Kairys
-          </h2>
+          <div className="flex justify-center rounded-full overflow-clip w-24 h-24 mx-auto mb-4">
+            <Image
+              src={"/home/laurynas.png"}
+              alt="profile-img"
+              width={200}
+              height={200}
+            />
+          </div>
+
+          <div className="flex items-center gap-4 justify-center">
+            <h2 className="pixel-text text-neon-blue mb-2 text-2xl">
+              Laurynas Kairys
+            </h2>
+            <a
+              href="https://github.com/laurexas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-1 flex items-center gap-2 transition-opacity hover:opacity-80"
+            >
+              <Image
+                src="/footer/github.svg"
+                alt="GitHub"
+                width={24}
+                height={24}
+              />
+            </a>
+          </div>
+
           <h1 className="pixel-text text-4xl md:text-5xl lg:text-7xl text-white mb-4">
             Software <span className="text-neon-orange">Engineer</span>
           </h1>
