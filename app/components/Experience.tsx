@@ -10,6 +10,14 @@ import Image from "next/image";
 import "@/app/styles/experience.css";
 
 const experiences: JobExperience[] = [
+    {
+    company: "Cube AI",
+    role: "Software Engineer",
+    period: "2025/08 - Current",
+    logo: "./experience/cube.svg",
+    description:
+      "Leverage AI agentic workflows to accelerate delivery across multiple concurrent projects built on Next.js, React, and Node.js. Collaborate cross-functionally with multiple teams to coordinate and ship secure, high-performance code that meets demanding product requirements in a fast-paced environment."
+  },
   {
     company: "SolarShare",
     role: "Software Engineer",
